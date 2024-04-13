@@ -46,7 +46,7 @@ class OrderHistory extends HiveObject {
   final int? deliveredTimestamp;
 
   @HiveField(13)
-   String? category = "Unknown";
+  String? category;
 
   OrderHistory(
       {required this.name,

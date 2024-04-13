@@ -2,7 +2,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import '../platform/platforms.dart';
 
-
 part 'saved_items.g.dart';
 
 @HiveType(typeId: 1)
