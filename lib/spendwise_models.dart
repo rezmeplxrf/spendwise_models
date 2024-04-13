@@ -1,4 +1,4 @@
 /// models for spendwise.
 library;
 
-export 'src/spendwise_models.dart';
+export '/src/things2buy/things2buy_model.dart';

@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:spendwise/src/core/domain_layer/hotdeal/hotdeal.dart';
 
+import '../hotdeal/hotdeal.dart';
 part 'pending_notification_model.freezed.dart';
 part 'pending_notification_model.g.dart';
 

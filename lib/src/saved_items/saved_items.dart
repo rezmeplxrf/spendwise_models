@@ -1,5 +1,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:spendwise/src/core/domain_layer/platform/platforms.dart';
+
+import '../platform/platforms.dart';
+
 
 part 'saved_items.g.dart';
 

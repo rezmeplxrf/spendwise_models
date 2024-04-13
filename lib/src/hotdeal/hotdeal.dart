@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:spendwise/src/core/domain_layer/platform/platforms.dart';
+
+import '../platform/platforms.dart';
 
 part 'hotdeal.freezed.dart';
 part 'hotdeal.g.dart';
