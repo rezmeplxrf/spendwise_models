@@ -11,7 +11,6 @@ class Product with _$Product {
       required String name,
       required double price,
       required Platforms platform,
-      required String category,
       double? rating,
       bool? soldOut,
       int? ratingCount,

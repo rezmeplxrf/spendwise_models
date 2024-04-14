@@ -24,7 +24,6 @@ mixin _$Product {
   String get name => throw _privateConstructorUsedError;
   double get price => throw _privateConstructorUsedError;
   Platforms get platform => throw _privateConstructorUsedError;
-  String get category => throw _privateConstructorUsedError;
   double? get rating => throw _privateConstructorUsedError;
   bool? get soldOut => throw _privateConstructorUsedError;
   int? get ratingCount => throw _privateConstructorUsedError;
@@ -48,7 +47,6 @@ abstract class $ProductCopyWith<$Res> {
       String name,
       double price,
       Platforms platform,
-      String category,
       double? rating,
       bool? soldOut,
       int? ratingCount,
@@ -75,7 +73,6 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? name = null,
     Object? price = null,
     Object? platform = null,
-    Object? category = null,
     Object? rating = freezed,
     Object? soldOut = freezed,
     Object? ratingCount = freezed,
@@ -101,10 +98,6 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as Platforms,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String,
       rating: freezed == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
@@ -149,7 +142,6 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
       String name,
       double price,
       Platforms platform,
-      String category,
       double? rating,
       bool? soldOut,
       int? ratingCount,
@@ -174,7 +166,6 @@ class __$$ProductImplCopyWithImpl<$Res>
     Object? name = null,
     Object? price = null,
     Object? platform = null,
-    Object? category = null,
     Object? rating = freezed,
     Object? soldOut = freezed,
     Object? ratingCount = freezed,
@@ -200,10 +191,6 @@ class __$$ProductImplCopyWithImpl<$Res>
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as Platforms,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String,
       rating: freezed == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
@@ -244,7 +231,6 @@ class _$ProductImpl implements _Product {
       required this.name,
       required this.price,
       required this.platform,
-      required this.category,
       this.rating,
       this.soldOut,
       this.ratingCount,
@@ -265,8 +251,6 @@ class _$ProductImpl implements _Product {
   @override
   final Platforms platform;
   @override
-  final String category;
-  @override
   final double? rating;
   @override
   final bool? soldOut;
@@ -283,7 +267,7 @@ class _$ProductImpl implements _Product {
 
   @override
   String toString() {
-    return 'Product(url: $url, name: $name, price: $price, platform: $platform, category: $category, rating: $rating, soldOut: $soldOut, ratingCount: $ratingCount, deliveryCost: $deliveryCost, deliveryEstimate: $deliveryEstimate, imageUrl: $imageUrl, seller: $seller)';
+    return 'Product(url: $url, name: $name, price: $price, platform: $platform, rating: $rating, soldOut: $soldOut, ratingCount: $ratingCount, deliveryCost: $deliveryCost, deliveryEstimate: $deliveryEstimate, imageUrl: $imageUrl, seller: $seller)';
   }
 
   @override
@@ -296,8 +280,6 @@ class _$ProductImpl implements _Product {
             (identical(other.price, price) || other.price == price) &&
             (identical(other.platform, platform) ||
                 other.platform == platform) &&
-            (identical(other.category, category) ||
-                other.category == category) &&
             (identical(other.rating, rating) || other.rating == rating) &&
             (identical(other.soldOut, soldOut) || other.soldOut == soldOut) &&
             (identical(other.ratingCount, ratingCount) ||
@@ -319,7 +301,6 @@ class _$ProductImpl implements _Product {
       name,
       price,
       platform,
-      category,
       rating,
       soldOut,
       ratingCount,
@@ -348,7 +329,6 @@ abstract class _Product implements Product {
       required final String name,
       required final double price,
       required final Platforms platform,
-      required final String category,
       final double? rating,
       final bool? soldOut,
       final int? ratingCount,
@@ -367,8 +347,6 @@ abstract class _Product implements Product {
   double get price;
   @override
   Platforms get platform;
-  @override
-  String get category;
   @override
   double? get rating;
   @override
