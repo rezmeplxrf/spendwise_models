@@ -1,10 +1,10 @@
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive/hive.dart';
 
 import 'platforms.dart';
 
 class PlatformsAdapter extends TypeAdapter<Platforms> {
   @override
-  final typeId = 10; 
+  final typeId = 10;
 
   @override
   Platforms read(BinaryReader reader) {
