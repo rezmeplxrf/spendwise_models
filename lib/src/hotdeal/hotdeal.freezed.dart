@@ -24,6 +24,7 @@ mixin _$HotDeal {
   String get url => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
   Platforms get platform => throw _privateConstructorUsedError;
+  String? get category => throw _privateConstructorUsedError;
   double? get rating => throw _privateConstructorUsedError;
   int? get ratingCount => throw _privateConstructorUsedError;
   bool? get isSoldOut => throw _privateConstructorUsedError;
@@ -55,6 +56,7 @@ abstract class $HotDealCopyWith<$Res> {
       String url,
       String imageUrl,
       Platforms platform,
+      String? category,
       double? rating,
       int? ratingCount,
       bool? isSoldOut,
@@ -89,6 +91,7 @@ class _$HotDealCopyWithImpl<$Res, $Val extends HotDeal>
     Object? url = null,
     Object? imageUrl = null,
     Object? platform = null,
+    Object? category = freezed,
     Object? rating = freezed,
     Object? ratingCount = freezed,
     Object? isSoldOut = freezed,
@@ -122,6 +125,10 @@ class _$HotDealCopyWithImpl<$Res, $Val extends HotDeal>
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as Platforms,
+      category: freezed == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String?,
       rating: freezed == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
@@ -198,6 +205,7 @@ abstract class _$$HotDealImplCopyWith<$Res> implements $HotDealCopyWith<$Res> {
       String url,
       String imageUrl,
       Platforms platform,
+      String? category,
       double? rating,
       int? ratingCount,
       bool? isSoldOut,
@@ -230,6 +238,7 @@ class __$$HotDealImplCopyWithImpl<$Res>
     Object? url = null,
     Object? imageUrl = null,
     Object? platform = null,
+    Object? category = freezed,
     Object? rating = freezed,
     Object? ratingCount = freezed,
     Object? isSoldOut = freezed,
@@ -263,6 +272,10 @@ class __$$HotDealImplCopyWithImpl<$Res>
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as Platforms,
+      category: freezed == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String?,
       rating: freezed == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
@@ -335,6 +348,7 @@ class _$HotDealImpl implements _HotDeal {
       required this.url,
       required this.imageUrl,
       required this.platform,
+      this.category,
       this.rating,
       this.ratingCount,
       this.isSoldOut,
@@ -362,6 +376,8 @@ class _$HotDealImpl implements _HotDeal {
   final String imageUrl;
   @override
   final Platforms platform;
+  @override
+  final String? category;
   @override
   final double? rating;
   @override
@@ -395,7 +411,7 @@ class _$HotDealImpl implements _HotDeal {
 
   @override
   String toString() {
-    return 'HotDeal(name: $name, url: $url, imageUrl: $imageUrl, platform: $platform, rating: $rating, ratingCount: $ratingCount, isSoldOut: $isSoldOut, progress: $progress, description: $description, originalPrice: $originalPrice, maxDiscountedPrice: $maxDiscountedPrice, isOnGoing: $isOnGoing, deliveryFee: $deliveryFee, startDate: $startDate, endDate: $endDate, finalPrice: $finalPrice, discountRate: $discountRate, deliveryEstimate: $deliveryEstimate, seller: $seller)';
+    return 'HotDeal(name: $name, url: $url, imageUrl: $imageUrl, platform: $platform, category: $category, rating: $rating, ratingCount: $ratingCount, isSoldOut: $isSoldOut, progress: $progress, description: $description, originalPrice: $originalPrice, maxDiscountedPrice: $maxDiscountedPrice, isOnGoing: $isOnGoing, deliveryFee: $deliveryFee, startDate: $startDate, endDate: $endDate, finalPrice: $finalPrice, discountRate: $discountRate, deliveryEstimate: $deliveryEstimate, seller: $seller)';
   }
 
   @override
@@ -409,6 +425,8 @@ class _$HotDealImpl implements _HotDeal {
                 other.imageUrl == imageUrl) &&
             (identical(other.platform, platform) ||
                 other.platform == platform) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
             (identical(other.rating, rating) || other.rating == rating) &&
             (identical(other.ratingCount, ratingCount) ||
                 other.ratingCount == ratingCount) &&
@@ -446,6 +464,7 @@ class _$HotDealImpl implements _HotDeal {
         url,
         imageUrl,
         platform,
+        category,
         rating,
         ratingCount,
         isSoldOut,
@@ -483,6 +502,7 @@ abstract class _HotDeal implements HotDeal {
       required final String url,
       required final String imageUrl,
       required final Platforms platform,
+      final String? category,
       final double? rating,
       final int? ratingCount,
       final bool? isSoldOut,
@@ -509,6 +529,8 @@ abstract class _HotDeal implements HotDeal {
   String get imageUrl;
   @override
   Platforms get platform;
+  @override
+  String? get category;
   @override
   double? get rating;
   @override

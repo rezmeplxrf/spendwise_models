@@ -12,6 +12,7 @@ class HotDeal with _$HotDeal {
       required String url,
       required String imageUrl,
       required Platforms platform,
+      String? category,
       double? rating,
       int? ratingCount,
       bool? isSoldOut,
