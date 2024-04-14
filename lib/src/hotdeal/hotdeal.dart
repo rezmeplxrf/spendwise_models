@@ -12,6 +12,7 @@ class HotDeal with _$HotDeal {
       required String url,
       required String imageUrl,
       required Platforms platform,
+      required String category,
       double? rating,
       int? ratingCount,
       bool? isSoldOut,
@@ -25,7 +26,7 @@ class HotDeal with _$HotDeal {
       DateTime? endDate,
       required double finalPrice,
       double? discountRate,
-       String? deliveryEstimate,
+      String? deliveryEstimate,
       String? seller}) = _HotDeal;
 
   factory HotDeal.fromJson(Map<String, dynamic> json) =>
