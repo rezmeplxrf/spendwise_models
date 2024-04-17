@@ -4,3 +4,4 @@ library;
 export '/src/product/product.dart';
 export '/src/platform/platforms.dart';
 export '/src/hotdeal/hotdeal.dart';
+export '/src/etc/mylogs.dart';
