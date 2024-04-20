@@ -28,6 +28,7 @@ mixin _$HotDeal {
   double? get rating => throw _privateConstructorUsedError;
   int? get ratingCount => throw _privateConstructorUsedError;
   bool? get isSoldOut => throw _privateConstructorUsedError;
+  int? get clickCount => throw _privateConstructorUsedError;
   double? get progress => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   double? get originalPrice => throw _privateConstructorUsedError;
@@ -60,6 +61,7 @@ abstract class $HotDealCopyWith<$Res> {
       double? rating,
       int? ratingCount,
       bool? isSoldOut,
+      int? clickCount,
       double? progress,
       String? description,
       double? originalPrice,
@@ -95,6 +97,7 @@ class _$HotDealCopyWithImpl<$Res, $Val extends HotDeal>
     Object? rating = freezed,
     Object? ratingCount = freezed,
     Object? isSoldOut = freezed,
+    Object? clickCount = freezed,
     Object? progress = freezed,
     Object? description = freezed,
     Object? originalPrice = freezed,
@@ -141,6 +144,10 @@ class _$HotDealCopyWithImpl<$Res, $Val extends HotDeal>
           ? _value.isSoldOut
           : isSoldOut // ignore: cast_nullable_to_non_nullable
               as bool?,
+      clickCount: freezed == clickCount
+          ? _value.clickCount
+          : clickCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       progress: freezed == progress
           ? _value.progress
           : progress // ignore: cast_nullable_to_non_nullable
@@ -209,6 +216,7 @@ abstract class _$$HotDealImplCopyWith<$Res> implements $HotDealCopyWith<$Res> {
       double? rating,
       int? ratingCount,
       bool? isSoldOut,
+      int? clickCount,
       double? progress,
       String? description,
       double? originalPrice,
@@ -242,6 +250,7 @@ class __$$HotDealImplCopyWithImpl<$Res>
     Object? rating = freezed,
     Object? ratingCount = freezed,
     Object? isSoldOut = freezed,
+    Object? clickCount = freezed,
     Object? progress = freezed,
     Object? description = freezed,
     Object? originalPrice = freezed,
@@ -288,6 +297,10 @@ class __$$HotDealImplCopyWithImpl<$Res>
           ? _value.isSoldOut
           : isSoldOut // ignore: cast_nullable_to_non_nullable
               as bool?,
+      clickCount: freezed == clickCount
+          ? _value.clickCount
+          : clickCount // ignore: cast_nullable_to_non_nullable
+              as int?,
       progress: freezed == progress
           ? _value.progress
           : progress // ignore: cast_nullable_to_non_nullable
@@ -352,6 +365,7 @@ class _$HotDealImpl implements _HotDeal {
       this.rating,
       this.ratingCount,
       this.isSoldOut,
+      this.clickCount,
       this.progress,
       this.description,
       this.originalPrice,
@@ -385,6 +399,8 @@ class _$HotDealImpl implements _HotDeal {
   @override
   final bool? isSoldOut;
   @override
+  final int? clickCount;
+  @override
   final double? progress;
   @override
   final String? description;
@@ -411,7 +427,7 @@ class _$HotDealImpl implements _HotDeal {
 
   @override
   String toString() {
-    return 'HotDeal(name: $name, url: $url, imageUrl: $imageUrl, platform: $platform, category: $category, rating: $rating, ratingCount: $ratingCount, isSoldOut: $isSoldOut, progress: $progress, description: $description, originalPrice: $originalPrice, maxDiscountedPrice: $maxDiscountedPrice, isOnGoing: $isOnGoing, deliveryFee: $deliveryFee, startDate: $startDate, endDate: $endDate, finalPrice: $finalPrice, discountRate: $discountRate, deliveryEstimate: $deliveryEstimate, seller: $seller)';
+    return 'HotDeal(name: $name, url: $url, imageUrl: $imageUrl, platform: $platform, category: $category, rating: $rating, ratingCount: $ratingCount, isSoldOut: $isSoldOut, clickCount: $clickCount, progress: $progress, description: $description, originalPrice: $originalPrice, maxDiscountedPrice: $maxDiscountedPrice, isOnGoing: $isOnGoing, deliveryFee: $deliveryFee, startDate: $startDate, endDate: $endDate, finalPrice: $finalPrice, discountRate: $discountRate, deliveryEstimate: $deliveryEstimate, seller: $seller)';
   }
 
   @override
@@ -432,6 +448,8 @@ class _$HotDealImpl implements _HotDeal {
                 other.ratingCount == ratingCount) &&
             (identical(other.isSoldOut, isSoldOut) ||
                 other.isSoldOut == isSoldOut) &&
+            (identical(other.clickCount, clickCount) ||
+                other.clickCount == clickCount) &&
             (identical(other.progress, progress) ||
                 other.progress == progress) &&
             (identical(other.description, description) ||
@@ -468,6 +486,7 @@ class _$HotDealImpl implements _HotDeal {
         rating,
         ratingCount,
         isSoldOut,
+        clickCount,
         progress,
         description,
         originalPrice,
@@ -506,6 +525,7 @@ abstract class _HotDeal implements HotDeal {
       final double? rating,
       final int? ratingCount,
       final bool? isSoldOut,
+      final int? clickCount,
       final double? progress,
       final String? description,
       final double? originalPrice,
@@ -537,6 +557,8 @@ abstract class _HotDeal implements HotDeal {
   int? get ratingCount;
   @override
   bool? get isSoldOut;
+  @override
+  int? get clickCount;
   @override
   double? get progress;
   @override

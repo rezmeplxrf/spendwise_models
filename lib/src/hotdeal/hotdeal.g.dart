@@ -16,6 +16,7 @@ _$HotDealImpl _$$HotDealImplFromJson(Map<String, dynamic> json) =>
       rating: (json['rating'] as num?)?.toDouble(),
       ratingCount: json['ratingCount'] as int?,
       isSoldOut: json['isSoldOut'] as bool?,
+      clickCount: json['clickCount'] as int?,
       progress: (json['progress'] as num?)?.toDouble(),
       description: json['description'] as String?,
       originalPrice: (json['originalPrice'] as num?)?.toDouble(),
@@ -44,6 +45,7 @@ Map<String, dynamic> _$$HotDealImplToJson(_$HotDealImpl instance) =>
       'rating': instance.rating,
       'ratingCount': instance.ratingCount,
       'isSoldOut': instance.isSoldOut,
+      'clickCount': instance.clickCount,
       'progress': instance.progress,
       'description': instance.description,
       'originalPrice': instance.originalPrice,
@@ -63,6 +65,5 @@ const _$PlatformsEnumMap = {
   Platforms.naver: 'naver',
   Platforms.timon: 'timon',
   Platforms.ably: 'ably',
-  Platforms.danawa: 'danawa',
   Platforms.all: 'all',
 };

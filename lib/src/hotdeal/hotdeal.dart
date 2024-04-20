@@ -16,6 +16,7 @@ class HotDeal with _$HotDeal {
       double? rating,
       int? ratingCount,
       bool? isSoldOut,
+      int? clickCount,
       double? progress,
       String? description,
       double? originalPrice,

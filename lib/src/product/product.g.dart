@@ -41,6 +41,5 @@ const _$PlatformsEnumMap = {
   Platforms.naver: 'naver',
   Platforms.timon: 'timon',
   Platforms.ably: 'ably',
-  Platforms.danawa: 'danawa',
   Platforms.all: 'all',
 };

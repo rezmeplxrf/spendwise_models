@@ -1,6 +1,6 @@
 name: spendwise_models
 description: common models for spendwise.
-version: 0.1.2+0
+version: 0.1.2+1
 publish_to: none
 
 environment:

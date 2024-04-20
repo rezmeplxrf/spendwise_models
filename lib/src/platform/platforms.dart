@@ -1,1 +1,1 @@
-enum Platforms { coupang, naver, timon, ably, danawa, all }
+enum Platforms { coupang, naver, timon, ably, all }
