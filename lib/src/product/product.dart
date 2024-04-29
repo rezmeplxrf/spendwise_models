@@ -16,6 +16,7 @@ class Product with _$Product {
       int? ratingCount,
       double? deliveryCost,
       String? deliveryEstimate,
+      bool? isAd,
       String? imageUrl,
       String? seller}) = _Product;
 
