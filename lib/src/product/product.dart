@@ -14,6 +14,7 @@ class Product with _$Product {
       double? rating,
       bool? soldOut,
       int? ratingCount,
+      String? category,
       double? deliveryCost,
       String? deliveryEstimate,
       bool? isAd,

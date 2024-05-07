@@ -27,6 +27,7 @@ mixin _$Product {
   double? get rating => throw _privateConstructorUsedError;
   bool? get soldOut => throw _privateConstructorUsedError;
   int? get ratingCount => throw _privateConstructorUsedError;
+  String? get category => throw _privateConstructorUsedError;
   double? get deliveryCost => throw _privateConstructorUsedError;
   String? get deliveryEstimate => throw _privateConstructorUsedError;
   bool? get isAd => throw _privateConstructorUsedError;
@@ -51,6 +52,7 @@ abstract class $ProductCopyWith<$Res> {
       double? rating,
       bool? soldOut,
       int? ratingCount,
+      String? category,
       double? deliveryCost,
       String? deliveryEstimate,
       bool? isAd,
@@ -78,6 +80,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? rating = freezed,
     Object? soldOut = freezed,
     Object? ratingCount = freezed,
+    Object? category = freezed,
     Object? deliveryCost = freezed,
     Object? deliveryEstimate = freezed,
     Object? isAd = freezed,
@@ -113,6 +116,10 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.ratingCount
           : ratingCount // ignore: cast_nullable_to_non_nullable
               as int?,
+      category: freezed == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String?,
       deliveryCost: freezed == deliveryCost
           ? _value.deliveryCost
           : deliveryCost // ignore: cast_nullable_to_non_nullable
@@ -152,6 +159,7 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
       double? rating,
       bool? soldOut,
       int? ratingCount,
+      String? category,
       double? deliveryCost,
       String? deliveryEstimate,
       bool? isAd,
@@ -177,6 +185,7 @@ class __$$ProductImplCopyWithImpl<$Res>
     Object? rating = freezed,
     Object? soldOut = freezed,
     Object? ratingCount = freezed,
+    Object? category = freezed,
     Object? deliveryCost = freezed,
     Object? deliveryEstimate = freezed,
     Object? isAd = freezed,
@@ -212,6 +221,10 @@ class __$$ProductImplCopyWithImpl<$Res>
           ? _value.ratingCount
           : ratingCount // ignore: cast_nullable_to_non_nullable
               as int?,
+      category: freezed == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String?,
       deliveryCost: freezed == deliveryCost
           ? _value.deliveryCost
           : deliveryCost // ignore: cast_nullable_to_non_nullable
@@ -247,6 +260,7 @@ class _$ProductImpl implements _Product {
       this.rating,
       this.soldOut,
       this.ratingCount,
+      this.category,
       this.deliveryCost,
       this.deliveryEstimate,
       this.isAd,
@@ -271,6 +285,8 @@ class _$ProductImpl implements _Product {
   @override
   final int? ratingCount;
   @override
+  final String? category;
+  @override
   final double? deliveryCost;
   @override
   final String? deliveryEstimate;
@@ -283,7 +299,7 @@ class _$ProductImpl implements _Product {
 
   @override
   String toString() {
-    return 'Product(url: $url, name: $name, price: $price, platform: $platform, rating: $rating, soldOut: $soldOut, ratingCount: $ratingCount, deliveryCost: $deliveryCost, deliveryEstimate: $deliveryEstimate, isAd: $isAd, imageUrl: $imageUrl, seller: $seller)';
+    return 'Product(url: $url, name: $name, price: $price, platform: $platform, rating: $rating, soldOut: $soldOut, ratingCount: $ratingCount, category: $category, deliveryCost: $deliveryCost, deliveryEstimate: $deliveryEstimate, isAd: $isAd, imageUrl: $imageUrl, seller: $seller)';
   }
 
   @override
@@ -300,6 +316,8 @@ class _$ProductImpl implements _Product {
             (identical(other.soldOut, soldOut) || other.soldOut == soldOut) &&
             (identical(other.ratingCount, ratingCount) ||
                 other.ratingCount == ratingCount) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
             (identical(other.deliveryCost, deliveryCost) ||
                 other.deliveryCost == deliveryCost) &&
             (identical(other.deliveryEstimate, deliveryEstimate) ||
@@ -321,6 +339,7 @@ class _$ProductImpl implements _Product {
       rating,
       soldOut,
       ratingCount,
+      category,
       deliveryCost,
       deliveryEstimate,
       isAd,
@@ -350,6 +369,7 @@ abstract class _Product implements Product {
       final double? rating,
       final bool? soldOut,
       final int? ratingCount,
+      final String? category,
       final double? deliveryCost,
       final String? deliveryEstimate,
       final bool? isAd,
@@ -372,6 +392,8 @@ abstract class _Product implements Product {
   bool? get soldOut;
   @override
   int? get ratingCount;
+  @override
+  String? get category;
   @override
   double? get deliveryCost;
   @override
