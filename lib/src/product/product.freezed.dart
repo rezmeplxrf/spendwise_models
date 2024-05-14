@@ -31,7 +31,7 @@ mixin _$Product {
   double? get deliveryCost => throw _privateConstructorUsedError;
   String? get deliveryEstimate => throw _privateConstructorUsedError;
   bool? get isAd => throw _privateConstructorUsedError;
-  List<String>? get imageUrl => throw _privateConstructorUsedError;
+  String? get imageUrl => throw _privateConstructorUsedError;
   String? get seller => throw _privateConstructorUsedError;
   Map<String, dynamic>? get info => throw _privateConstructorUsedError;
 
@@ -57,7 +57,7 @@ abstract class $ProductCopyWith<$Res> {
       double? deliveryCost,
       String? deliveryEstimate,
       bool? isAd,
-      List<String>? imageUrl,
+      String? imageUrl,
       String? seller,
       Map<String, dynamic>? info});
 }
@@ -138,7 +138,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
       imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as String?,
       seller: freezed == seller
           ? _value.seller
           : seller // ignore: cast_nullable_to_non_nullable
@@ -170,7 +170,7 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
       double? deliveryCost,
       String? deliveryEstimate,
       bool? isAd,
-      List<String>? imageUrl,
+      String? imageUrl,
       String? seller,
       Map<String, dynamic>? info});
 }
@@ -247,9 +247,9 @@ class __$$ProductImplCopyWithImpl<$Res>
           : isAd // ignore: cast_nullable_to_non_nullable
               as bool?,
       imageUrl: freezed == imageUrl
-          ? _value._imageUrl
+          ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as String?,
       seller: freezed == seller
           ? _value.seller
           : seller // ignore: cast_nullable_to_non_nullable
@@ -277,11 +277,10 @@ class _$ProductImpl implements _Product {
       this.deliveryCost,
       this.deliveryEstimate,
       this.isAd,
-      final List<String>? imageUrl,
+      this.imageUrl,
       this.seller,
       final Map<String, dynamic>? info})
-      : _imageUrl = imageUrl,
-        _info = info;
+      : _info = info;
 
   factory _$ProductImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProductImplFromJson(json);
@@ -308,16 +307,8 @@ class _$ProductImpl implements _Product {
   final String? deliveryEstimate;
   @override
   final bool? isAd;
-  final List<String>? _imageUrl;
   @override
-  List<String>? get imageUrl {
-    final value = _imageUrl;
-    if (value == null) return null;
-    if (_imageUrl is EqualUnmodifiableListView) return _imageUrl;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final String? imageUrl;
   @override
   final String? seller;
   final Map<String, dynamic>? _info;
@@ -356,7 +347,8 @@ class _$ProductImpl implements _Product {
             (identical(other.deliveryEstimate, deliveryEstimate) ||
                 other.deliveryEstimate == deliveryEstimate) &&
             (identical(other.isAd, isAd) || other.isAd == isAd) &&
-            const DeepCollectionEquality().equals(other._imageUrl, _imageUrl) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
             (identical(other.seller, seller) || other.seller == seller) &&
             const DeepCollectionEquality().equals(other._info, _info));
   }
@@ -376,7 +368,7 @@ class _$ProductImpl implements _Product {
       deliveryCost,
       deliveryEstimate,
       isAd,
-      const DeepCollectionEquality().hash(_imageUrl),
+      imageUrl,
       seller,
       const DeepCollectionEquality().hash(_info));
 
@@ -407,7 +399,7 @@ abstract class _Product implements Product {
       final double? deliveryCost,
       final String? deliveryEstimate,
       final bool? isAd,
-      final List<String>? imageUrl,
+      final String? imageUrl,
       final String? seller,
       final Map<String, dynamic>? info}) = _$ProductImpl;
 
@@ -436,7 +428,7 @@ abstract class _Product implements Product {
   @override
   bool? get isAd;
   @override
-  List<String>? get imageUrl;
+  String? get imageUrl;
   @override
   String? get seller;
   @override
