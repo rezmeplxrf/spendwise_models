@@ -18,7 +18,7 @@ class Product with _$Product {
       double? deliveryCost,
       String? deliveryEstimate,
       bool? isAd,
-      String? imageUrl,
+      List<String>? imageUrl,
       String? seller,
       Map<String, dynamic>? info}) = _Product;
 

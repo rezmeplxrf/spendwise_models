@@ -19,7 +19,9 @@ _$ProductImpl _$$ProductImplFromJson(Map<String, dynamic> json) =>
       deliveryCost: (json['deliveryCost'] as num?)?.toDouble(),
       deliveryEstimate: json['deliveryEstimate'] as String?,
       isAd: json['isAd'] as bool?,
-      imageUrl: json['imageUrl'] as String?,
+      imageUrl: (json['imageUrl'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       seller: json['seller'] as String?,
       info: json['info'] as Map<String, dynamic>?,
     );
