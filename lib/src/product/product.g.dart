@@ -14,13 +14,14 @@ _$ProductImpl _$$ProductImplFromJson(Map<String, dynamic> json) =>
       platform: $enumDecode(_$PlatformsEnumMap, json['platform']),
       rating: (json['rating'] as num?)?.toDouble(),
       soldOut: json['soldOut'] as bool?,
-      ratingCount: json['ratingCount'] as int?,
+      ratingCount: (json['ratingCount'] as num?)?.toInt(),
       category: json['category'] as String?,
       deliveryCost: (json['deliveryCost'] as num?)?.toDouble(),
       deliveryEstimate: json['deliveryEstimate'] as String?,
       isAd: json['isAd'] as bool?,
       imageUrl: json['imageUrl'] as String?,
       seller: json['seller'] as String?,
+      info: json['info'] as Map<String, dynamic>?,
     );
 
 Map<String, dynamic> _$$ProductImplToJson(_$ProductImpl instance) =>
@@ -38,12 +39,14 @@ Map<String, dynamic> _$$ProductImplToJson(_$ProductImpl instance) =>
       'isAd': instance.isAd,
       'imageUrl': instance.imageUrl,
       'seller': instance.seller,
+      'info': instance.info,
     };
 
 const _$PlatformsEnumMap = {
+  Platforms.all: 'all',
   Platforms.coupang: 'coupang',
   Platforms.naver: 'naver',
   Platforms.timon: 'timon',
   Platforms.ably: 'ably',
-  Platforms.all: 'all',
+  Platforms.social: 'social',
 };

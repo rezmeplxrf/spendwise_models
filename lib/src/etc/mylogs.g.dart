@@ -7,7 +7,7 @@ part of 'mylogs.dart';
 // **************************************************************************
 
 _$MyLogsImpl _$$MyLogsImplFromJson(Map<String, dynamic> json) => _$MyLogsImpl(
-      timeStamp: json['timeStamp'] as int,
+      timeStamp: (json['timeStamp'] as num).toInt(),
       functionName: json['functionName'] as String,
       args: json['args'] as Map<String, dynamic>?,
       info: json['info'] as String?,

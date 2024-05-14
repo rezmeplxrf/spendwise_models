@@ -19,7 +19,8 @@ class Product with _$Product {
       String? deliveryEstimate,
       bool? isAd,
       String? imageUrl,
-      String? seller}) = _Product;
+      String? seller,
+      Map<String, dynamic>? info}) = _Product;
 
   factory Product.fromJson(Map<String, dynamic> json) =>
       _$ProductFromJson(json);

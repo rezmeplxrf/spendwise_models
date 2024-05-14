@@ -14,7 +14,7 @@ _$HotDealImpl _$$HotDealImplFromJson(Map<String, dynamic> json) =>
       platform: $enumDecode(_$PlatformsEnumMap, json['platform']),
       category: json['category'] as String?,
       rating: (json['rating'] as num?)?.toDouble(),
-      ratingCount: json['ratingCount'] as int?,
+      ratingCount: (json['ratingCount'] as num?)?.toInt(),
       isSoldOut: json['isSoldOut'] as bool?,
       description: json['description'] as String?,
       originalPrice: (json['originalPrice'] as num?)?.toDouble(),
@@ -55,9 +55,10 @@ Map<String, dynamic> _$$HotDealImplToJson(_$HotDealImpl instance) =>
     };
 
 const _$PlatformsEnumMap = {
+  Platforms.all: 'all',
   Platforms.coupang: 'coupang',
   Platforms.naver: 'naver',
   Platforms.timon: 'timon',
   Platforms.ably: 'ably',
-  Platforms.all: 'all',
+  Platforms.social: 'social',
 };
