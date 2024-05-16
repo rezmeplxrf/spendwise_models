@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../detail/detail_param.dart';
 import '../platform/platforms.dart';
 part 'product.freezed.dart';
 part 'product.g.dart';
@@ -20,7 +21,7 @@ class Product with _$Product {
       bool? isAd,
       String? imageUrl,
       String? seller,
-      Map<String, dynamic>? info}) = _Product;
+      DetailParams? detailParams}) = _Product;
 
   factory Product.fromJson(Map<String, dynamic> json) =>
       _$ProductFromJson(json);

@@ -30,6 +30,9 @@ _$HotDealImpl _$$HotDealImplFromJson(Map<String, dynamic> json) =>
       discountRate: (json['discountRate'] as num?)?.toDouble(),
       deliveryEstimate: json['deliveryEstimate'] as String?,
       seller: json['seller'] as String?,
+      detailParams: json['detailParams'] == null
+          ? null
+          : DetailParams.fromJson(json['detailParams'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$HotDealImplToJson(_$HotDealImpl instance) =>
@@ -52,6 +55,7 @@ Map<String, dynamic> _$$HotDealImplToJson(_$HotDealImpl instance) =>
       'discountRate': instance.discountRate,
       'deliveryEstimate': instance.deliveryEstimate,
       'seller': instance.seller,
+      'detailParams': instance.detailParams,
     };
 
 const _$PlatformsEnumMap = {

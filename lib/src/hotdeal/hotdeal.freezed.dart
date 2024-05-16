@@ -38,6 +38,7 @@ mixin _$HotDeal {
   double? get discountRate => throw _privateConstructorUsedError;
   String? get deliveryEstimate => throw _privateConstructorUsedError;
   String? get seller => throw _privateConstructorUsedError;
+  DetailParams? get detailParams => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,7 +68,10 @@ abstract class $HotDealCopyWith<$Res> {
       double finalPrice,
       double? discountRate,
       String? deliveryEstimate,
-      String? seller});
+      String? seller,
+      DetailParams? detailParams});
+
+  $DetailParamsCopyWith<$Res>? get detailParams;
 }
 
 /// @nodoc
@@ -101,6 +105,7 @@ class _$HotDealCopyWithImpl<$Res, $Val extends HotDeal>
     Object? discountRate = freezed,
     Object? deliveryEstimate = freezed,
     Object? seller = freezed,
+    Object? detailParams = freezed,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -175,7 +180,23 @@ class _$HotDealCopyWithImpl<$Res, $Val extends HotDeal>
           ? _value.seller
           : seller // ignore: cast_nullable_to_non_nullable
               as String?,
+      detailParams: freezed == detailParams
+          ? _value.detailParams
+          : detailParams // ignore: cast_nullable_to_non_nullable
+              as DetailParams?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DetailParamsCopyWith<$Res>? get detailParams {
+    if (_value.detailParams == null) {
+      return null;
+    }
+
+    return $DetailParamsCopyWith<$Res>(_value.detailParams!, (value) {
+      return _then(_value.copyWith(detailParams: value) as $Val);
+    });
   }
 }
 
@@ -204,7 +225,11 @@ abstract class _$$HotDealImplCopyWith<$Res> implements $HotDealCopyWith<$Res> {
       double finalPrice,
       double? discountRate,
       String? deliveryEstimate,
-      String? seller});
+      String? seller,
+      DetailParams? detailParams});
+
+  @override
+  $DetailParamsCopyWith<$Res>? get detailParams;
 }
 
 /// @nodoc
@@ -236,6 +261,7 @@ class __$$HotDealImplCopyWithImpl<$Res>
     Object? discountRate = freezed,
     Object? deliveryEstimate = freezed,
     Object? seller = freezed,
+    Object? detailParams = freezed,
   }) {
     return _then(_$HotDealImpl(
       name: null == name
@@ -310,6 +336,10 @@ class __$$HotDealImplCopyWithImpl<$Res>
           ? _value.seller
           : seller // ignore: cast_nullable_to_non_nullable
               as String?,
+      detailParams: freezed == detailParams
+          ? _value.detailParams
+          : detailParams // ignore: cast_nullable_to_non_nullable
+              as DetailParams?,
     ));
   }
 }
@@ -335,7 +365,8 @@ class _$HotDealImpl implements _HotDeal {
       required this.finalPrice,
       this.discountRate,
       this.deliveryEstimate,
-      this.seller});
+      this.seller,
+      this.detailParams});
 
   factory _$HotDealImpl.fromJson(Map<String, dynamic> json) =>
       _$$HotDealImplFromJson(json);
@@ -376,10 +407,12 @@ class _$HotDealImpl implements _HotDeal {
   final String? deliveryEstimate;
   @override
   final String? seller;
+  @override
+  final DetailParams? detailParams;
 
   @override
   String toString() {
-    return 'HotDeal(name: $name, url: $url, imageUrl: $imageUrl, platform: $platform, category: $category, rating: $rating, ratingCount: $ratingCount, isSoldOut: $isSoldOut, description: $description, originalPrice: $originalPrice, maxDiscountedPrice: $maxDiscountedPrice, deliveryFee: $deliveryFee, startDate: $startDate, endDate: $endDate, finalPrice: $finalPrice, discountRate: $discountRate, deliveryEstimate: $deliveryEstimate, seller: $seller)';
+    return 'HotDeal(name: $name, url: $url, imageUrl: $imageUrl, platform: $platform, category: $category, rating: $rating, ratingCount: $ratingCount, isSoldOut: $isSoldOut, description: $description, originalPrice: $originalPrice, maxDiscountedPrice: $maxDiscountedPrice, deliveryFee: $deliveryFee, startDate: $startDate, endDate: $endDate, finalPrice: $finalPrice, discountRate: $discountRate, deliveryEstimate: $deliveryEstimate, seller: $seller, detailParams: $detailParams)';
   }
 
   @override
@@ -417,31 +450,35 @@ class _$HotDealImpl implements _HotDeal {
                 other.discountRate == discountRate) &&
             (identical(other.deliveryEstimate, deliveryEstimate) ||
                 other.deliveryEstimate == deliveryEstimate) &&
-            (identical(other.seller, seller) || other.seller == seller));
+            (identical(other.seller, seller) || other.seller == seller) &&
+            (identical(other.detailParams, detailParams) ||
+                other.detailParams == detailParams));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      name,
-      url,
-      imageUrl,
-      platform,
-      category,
-      rating,
-      ratingCount,
-      isSoldOut,
-      description,
-      originalPrice,
-      maxDiscountedPrice,
-      deliveryFee,
-      startDate,
-      endDate,
-      finalPrice,
-      discountRate,
-      deliveryEstimate,
-      seller);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        name,
+        url,
+        imageUrl,
+        platform,
+        category,
+        rating,
+        ratingCount,
+        isSoldOut,
+        description,
+        originalPrice,
+        maxDiscountedPrice,
+        deliveryFee,
+        startDate,
+        endDate,
+        finalPrice,
+        discountRate,
+        deliveryEstimate,
+        seller,
+        detailParams
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -476,7 +513,8 @@ abstract class _HotDeal implements HotDeal {
       required final double finalPrice,
       final double? discountRate,
       final String? deliveryEstimate,
-      final String? seller}) = _$HotDealImpl;
+      final String? seller,
+      final DetailParams? detailParams}) = _$HotDealImpl;
 
   factory _HotDeal.fromJson(Map<String, dynamic> json) = _$HotDealImpl.fromJson;
 
@@ -516,6 +554,8 @@ abstract class _HotDeal implements HotDeal {
   String? get deliveryEstimate;
   @override
   String? get seller;
+  @override
+  DetailParams? get detailParams;
   @override
   @JsonKey(ignore: true)
   _$$HotDealImplCopyWith<_$HotDealImpl> get copyWith =>

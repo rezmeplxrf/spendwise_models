@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../detail/detail_param.dart';
 import '../platform/platforms.dart';
 
 part 'hotdeal.freezed.dart';
@@ -25,7 +26,9 @@ class HotDeal with _$HotDeal {
       required double finalPrice,
       double? discountRate,
       String? deliveryEstimate,
-      String? seller}) = _HotDeal;
+      String? seller,
+      DetailParams? detailParams,
+      }) = _HotDeal;
 
   factory HotDeal.fromJson(Map<String, dynamic> json) =>
       _$HotDealFromJson(json);

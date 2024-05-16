@@ -21,7 +21,9 @@ _$ProductImpl _$$ProductImplFromJson(Map<String, dynamic> json) =>
       isAd: json['isAd'] as bool?,
       imageUrl: json['imageUrl'] as String?,
       seller: json['seller'] as String?,
-      info: json['info'] as Map<String, dynamic>?,
+      detailParams: json['detailParams'] == null
+          ? null
+          : DetailParams.fromJson(json['detailParams'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ProductImplToJson(_$ProductImpl instance) =>
@@ -39,7 +41,7 @@ Map<String, dynamic> _$$ProductImplToJson(_$ProductImpl instance) =>
       'isAd': instance.isAd,
       'imageUrl': instance.imageUrl,
       'seller': instance.seller,
-      'info': instance.info,
+      'detailParams': instance.detailParams,
     };
 
 const _$PlatformsEnumMap = {
