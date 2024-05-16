@@ -33,6 +33,7 @@ mixin _$Product {
   bool? get isAd => throw _privateConstructorUsedError;
   String? get imageUrl => throw _privateConstructorUsedError;
   String? get seller => throw _privateConstructorUsedError;
+  String? get delieveryType => throw _privateConstructorUsedError;
   DetailParams? get detailParams => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -59,6 +60,7 @@ abstract class $ProductCopyWith<$Res> {
       bool? isAd,
       String? imageUrl,
       String? seller,
+      String? delieveryType,
       DetailParams? detailParams});
 
   $DetailParamsCopyWith<$Res>? get detailParams;
@@ -90,6 +92,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? isAd = freezed,
     Object? imageUrl = freezed,
     Object? seller = freezed,
+    Object? delieveryType = freezed,
     Object? detailParams = freezed,
   }) {
     return _then(_value.copyWith(
@@ -145,6 +148,10 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.seller
           : seller // ignore: cast_nullable_to_non_nullable
               as String?,
+      delieveryType: freezed == delieveryType
+          ? _value.delieveryType
+          : delieveryType // ignore: cast_nullable_to_non_nullable
+              as String?,
       detailParams: freezed == detailParams
           ? _value.detailParams
           : detailParams // ignore: cast_nullable_to_non_nullable
@@ -186,6 +193,7 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
       bool? isAd,
       String? imageUrl,
       String? seller,
+      String? delieveryType,
       DetailParams? detailParams});
 
   @override
@@ -216,6 +224,7 @@ class __$$ProductImplCopyWithImpl<$Res>
     Object? isAd = freezed,
     Object? imageUrl = freezed,
     Object? seller = freezed,
+    Object? delieveryType = freezed,
     Object? detailParams = freezed,
   }) {
     return _then(_$ProductImpl(
@@ -271,6 +280,10 @@ class __$$ProductImplCopyWithImpl<$Res>
           ? _value.seller
           : seller // ignore: cast_nullable_to_non_nullable
               as String?,
+      delieveryType: freezed == delieveryType
+          ? _value.delieveryType
+          : delieveryType // ignore: cast_nullable_to_non_nullable
+              as String?,
       detailParams: freezed == detailParams
           ? _value.detailParams
           : detailParams // ignore: cast_nullable_to_non_nullable
@@ -296,6 +309,7 @@ class _$ProductImpl implements _Product {
       this.isAd,
       this.imageUrl,
       this.seller,
+      this.delieveryType,
       this.detailParams});
 
   factory _$ProductImpl.fromJson(Map<String, dynamic> json) =>
@@ -328,11 +342,13 @@ class _$ProductImpl implements _Product {
   @override
   final String? seller;
   @override
+  final String? delieveryType;
+  @override
   final DetailParams? detailParams;
 
   @override
   String toString() {
-    return 'Product(url: $url, name: $name, price: $price, platform: $platform, rating: $rating, soldOut: $soldOut, ratingCount: $ratingCount, category: $category, deliveryCost: $deliveryCost, deliveryEstimate: $deliveryEstimate, isAd: $isAd, imageUrl: $imageUrl, seller: $seller, detailParams: $detailParams)';
+    return 'Product(url: $url, name: $name, price: $price, platform: $platform, rating: $rating, soldOut: $soldOut, ratingCount: $ratingCount, category: $category, deliveryCost: $deliveryCost, deliveryEstimate: $deliveryEstimate, isAd: $isAd, imageUrl: $imageUrl, seller: $seller, delieveryType: $delieveryType, detailParams: $detailParams)';
   }
 
   @override
@@ -359,6 +375,8 @@ class _$ProductImpl implements _Product {
             (identical(other.imageUrl, imageUrl) ||
                 other.imageUrl == imageUrl) &&
             (identical(other.seller, seller) || other.seller == seller) &&
+            (identical(other.delieveryType, delieveryType) ||
+                other.delieveryType == delieveryType) &&
             (identical(other.detailParams, detailParams) ||
                 other.detailParams == detailParams));
   }
@@ -380,6 +398,7 @@ class _$ProductImpl implements _Product {
       isAd,
       imageUrl,
       seller,
+      delieveryType,
       detailParams);
 
   @JsonKey(ignore: true)
@@ -411,6 +430,7 @@ abstract class _Product implements Product {
       final bool? isAd,
       final String? imageUrl,
       final String? seller,
+      final String? delieveryType,
       final DetailParams? detailParams}) = _$ProductImpl;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$ProductImpl.fromJson;
@@ -441,6 +461,8 @@ abstract class _Product implements Product {
   String? get imageUrl;
   @override
   String? get seller;
+  @override
+  String? get delieveryType;
   @override
   DetailParams? get detailParams;
   @override
